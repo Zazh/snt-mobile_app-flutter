@@ -346,7 +346,7 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
   Widget _buildAudioWaveform(double progress) {
     return Container(
       height: 32, // уменьшили высоту контейнера
-      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4), // добавили отступы
+      padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
       decoration: BoxDecoration(
         border: Border.all(color: Colors.grey[300]!, width: 1), // серая рамка
         borderRadius: BorderRadius.circular(16), // скругление углов
@@ -365,19 +365,19 @@ class _LessonDetailScreenState extends State<LessonDetailScreen> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.center,
-          children: List.generate(20, (index) { // уменьшили количество полосок до 20
+          children: List.generate(20, (index) {
             final waveHeights = [
               0.4, 0.8, 0.5, 0.9, 0.3, 1.0, 0.6, 0.7, 0.9, 0.4,
               0.8, 0.5, 1.0, 0.3, 0.7, 0.9, 0.4, 0.8, 0.6, 0.5,
               0.4, 0.8, 0.5, 0.9, 0.3, 1.0, 0.6, 0.7, 0.9
             ];
 
-            final waveHeight = waveHeights[index] * 18; // уменьшили максимальную высоту до 18px
-            final isPlayed = index / 20 <= progress; // обновили расчет для 20 полосок
+            final waveHeight = waveHeights[index] * 18;
+            final isPlayed = index / 20 <= progress;
 
             return Container(
               width: 2,
-              height: waveHeight + 3, // минимум 3px высоты
+              height: waveHeight + 3,
               decoration: BoxDecoration(
                 color: isPlayed ? Colors.blue[600] : Colors.grey[400],
                 borderRadius: BorderRadius.circular(1),
