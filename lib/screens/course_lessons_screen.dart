@@ -215,11 +215,9 @@ class _CourseLessonsScreenState extends State<CourseLessonsScreen> {
         ),
       ),
     ).then((_) {
-      // Можно обновить прогресс после возвращения с урока
       setState(() {
-        // Здесь можно пометить урок как пройденный
+        // Пометить урок как пройденный
         // lesson.isCompleted = true;
-        // и пересчитать прогресс курса
       });
     });
   }
